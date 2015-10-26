@@ -1,5 +1,6 @@
 /*
 * Copyright (C) 2015 The CyanogenMod Project
+* Copyright (C) 2015 The MoKee Open Source Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -26,8 +27,8 @@ import android.os.Message;
 import android.service.trust.TrustAgentService;
 import android.util.Log;
 
-import cyanogenmod.app.Profile;
-import cyanogenmod.app.ProfileManager;
+import mokee.app.Profile;
+import mokee.app.ProfileManager;
 
 import java.lang.ref.WeakReference;
 
