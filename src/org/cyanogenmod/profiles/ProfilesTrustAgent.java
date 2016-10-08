@@ -1,5 +1,6 @@
 /*
 * Copyright (C) 2015 The CyanogenMod Project
+* Copyright (C) 2015 The MoKee Open Source Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -34,9 +35,9 @@ import android.os.UserHandle;
 import android.service.trust.TrustAgentService;
 import android.util.ArraySet;
 import android.util.Log;
-import cyanogenmod.app.Profile;
-import cyanogenmod.app.ProfileManager;
-import cyanogenmod.providers.CMSettings;
+import mokee.app.Profile;
+import mokee.app.ProfileManager;
+import mokee.providers.MKSettings;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -96,7 +97,7 @@ public class ProfilesTrustAgent extends TrustAgentService {
             setManagingTrust(true);
             mObserver = new SystemProfilesSettingsObserver(mHandler);
             getContentResolver().registerContentObserver(
-                    CMSettings.System.getUriFor(CMSettings.System.SYSTEM_PROFILES_ENABLED),
+                    MKSettings.System.getUriFor(MKSettings.System.SYSTEM_PROFILES_ENABLED),
                     false, mObserver);
             mHandler.sendEmptyMessage(MSG_ON_AGENT_CREATED);
         }
@@ -314,7 +315,7 @@ public class ProfilesTrustAgent extends TrustAgentService {
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
-            if (CMSettings.System.getUriFor(CMSettings.System.SYSTEM_PROFILES_ENABLED)
+            if (MKSettings.System.getUriFor(MKSettings.System.SYSTEM_PROFILES_ENABLED)
                     .compareTo(uri) == 0) {
                 mHandler.sendEmptyMessage(MSG_UPDATE_STATE);
             }
