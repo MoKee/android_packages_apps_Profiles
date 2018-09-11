@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.profiles;
+package org.mokee.profiles;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -28,8 +28,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import lineageos.app.Profile;
-import lineageos.app.ProfileManager;
+import mokee.app.Profile;
+import mokee.app.ProfileManager;
 
 import com.android.internal.app.AlertActivity;
 import com.android.internal.app.AlertController;

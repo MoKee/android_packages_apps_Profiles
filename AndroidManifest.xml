@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.lineageos.profiles">
+          package="org.mokee.profiles">
 
     <original-package android:name="org.cyanogenmod.profiles" />
 
@@ -53,7 +53,7 @@
                   android:theme="@*android:style/Theme.Material.Dialog.Alert"
                   android:excludeFromRecents="true">
             <intent-filter>
-                <action android:name="lineageos.platform.intent.action.PROFILE_PICKER" />
+                <action android:name="mokee.platform.intent.action.PROFILE_PICKER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
