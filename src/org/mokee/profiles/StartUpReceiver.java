@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-package org.lineageos.profiles;
+package org.mokee.profiles;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
