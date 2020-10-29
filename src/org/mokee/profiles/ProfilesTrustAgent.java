@@ -37,7 +37,7 @@ import android.util.ArraySet;
 import android.util.Log;
 import mokee.app.Profile;
 import mokee.app.ProfileManager;
-import mokee.providers.MKSettings;
+import mokee.providers.MoKeeSettings;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -97,7 +97,7 @@ public class ProfilesTrustAgent extends TrustAgentService {
             setManagingTrust(true);
             mObserver = new SystemProfilesSettingsObserver(mHandler);
             getContentResolver().registerContentObserver(
-                    MKSettings.System.getUriFor(MKSettings.System.SYSTEM_PROFILES_ENABLED),
+                    MoKeeSettings.System.getUriFor(MoKeeSettings.System.SYSTEM_PROFILES_ENABLED),
                     false, mObserver);
             mHandler.sendEmptyMessage(MSG_ON_AGENT_CREATED);
         }
@@ -321,7 +321,7 @@ public class ProfilesTrustAgent extends TrustAgentService {
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
-            if (MKSettings.System.getUriFor(MKSettings.System.SYSTEM_PROFILES_ENABLED)
+            if (MoKeeSettings.System.getUriFor(MoKeeSettings.System.SYSTEM_PROFILES_ENABLED)
                     .compareTo(uri) == 0) {
                 mHandler.sendEmptyMessage(MSG_UPDATE_STATE);
             }
